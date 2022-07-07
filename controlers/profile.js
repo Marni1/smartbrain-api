@@ -2,7 +2,7 @@ const handleProfile = (req, res) =>{
 
     const {id} = req.params;
     let found = false;
-    knex.select('*')
+    db.select('*')
     .from('users')
     .where({
         id: id,
