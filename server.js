@@ -16,12 +16,7 @@ const knex =require('knex')({
       ssl: false
     }
   });
-  client.connect();
-
-
-
-
-
+  
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
