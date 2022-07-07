@@ -16,6 +16,7 @@ const knex =require('knex')({
       ssl: false
     }
   });
+  client.connect();
 
 
 
