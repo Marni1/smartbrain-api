@@ -9,7 +9,6 @@ const profile = require ('./controlers/profile');
 const image = require('./controlers/image');
 
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const knex =require('knex')({
     client: 'pg',
     connection: {
