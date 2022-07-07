@@ -7,6 +7,7 @@ const register = require('./controlers/register');
 const signin = require('./controlers/signin');
 const profile = require ('./controlers/profile');
 const image = require('./controlers/image');
+const { Client } = require('pg');
 
 
 const knex =require('knex')({
