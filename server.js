@@ -18,7 +18,7 @@ const knex =require('knex')({
     }
   });
 
-  client.connect();
+
 
 
 
