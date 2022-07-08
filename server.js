@@ -13,17 +13,19 @@ const {Client} = require('pg')
 
 const db = knex({
   client: 'pg',
+  connection:{
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
-});
-db.connect()
+}});
+
 
   
 const app = express();
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
+
 
 
 
