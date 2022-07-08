@@ -15,20 +15,12 @@ const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
-      ssl: true
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
-    
-    }
-      
-  );
-  const client = new Client({
-    connectionString : process.env.DATABASE_URL,
-    ssl:{
-      rejectUnauthorized: false
-    }
-    })
-
-    client.connect();
+  });
+  
   
 const app = express();
 app.use(bodyParser.json());
