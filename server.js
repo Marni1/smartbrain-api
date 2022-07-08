@@ -8,14 +8,16 @@ const register = require('./controlers/register');
 const signin = require('./controlers/signin');
 const profile = require ('./controlers/profile');
 const image = require('./controlers/image');
+const {db} = require('pg')
 
 
 const db = knex({
     client: 'pg',
-    connection: {
-      connectionString : process.env.DATABASE_URL,
-      ssl: true
-  }
+    connectionString : process.env.DATABASE_URL,
+    ssl : {
+      rejectUnatorized: fasle
+    }
+      
   });
   
 const app = express();
