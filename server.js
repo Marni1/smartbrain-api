@@ -10,13 +10,16 @@ const profile = require ('./controlers/profile');
 const image = require('./controlers/image');
 const {Client} = require('pg')
 
-
 const db = knex({
   client: 'pg',
+  version: '7.2',
   connection: {
     connectionString: process.env.DATABASE_URL,
-    ssl: false
-  }})
+    ssl: {
+      rejectUnauthorized: false
+    }
+  }
+});
 
 
   
