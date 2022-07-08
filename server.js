@@ -18,6 +18,7 @@ const db = knex({
     rejectUnauthorized: false
   }
 });
+db.connect()
 
   
 const app = express();
