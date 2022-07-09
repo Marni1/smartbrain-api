@@ -6,9 +6,6 @@ const app = new Clarifai.App({
   });
 const handleApiCall = (req, res) =>{
   const {input} = req.body;
-  if(!input) {
-    return res.status(400).json('enter URL');
-  }
   app.models
   .predict(Clarifai.FACE_DETECT_MODEL, input)
   .then(data => {
