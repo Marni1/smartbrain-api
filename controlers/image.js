@@ -2,7 +2,7 @@ const { json } = require('body-parser');
 const Clarifai = require('clarifai')
 
 const app = new Clarifai.App({
-    apiKey: '4e30ea7d34a24bb5bfa1b457891fc7ec'
+    apiKey: '0fd567c860fb42aea1cca605a353769a'
   });
 const handleApiCall = (req, res) =>{
   app.models
